@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Musicon</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- EXTERNSL CSS  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- HANDELBARS SCRIPT -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"
+      integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- HANDELBARS TEMPLATE -->
+    <script id="templateHB" type="text/x-handlebars-template">
+      <div class="hero">
+        <h1 class="title">
+          <span class="highlight-white">{{prefix1}}</span>
+          {{mainTitle}}
+          <span class="highlight-yellow">{{prefix2}}</span>
+          {{subTitle}}
+        </h1>
+        <p class="body">{{body}}</p>
+        <a href="store.html" class="btn-black">{{buttonText}}</a>
+      </div>
+      <div class="img-hero">
+        <img src="assets/guitars.png" alt="{{imgAlt}}" class="img-hero" />
+      </div>
+    </script>
+  </head>
+
+  <body>
+    <!-- HEADER & NAVBAR -->
+    <header>
+      <section class="container flex aic jcsb">
+        <h1 class="branding">Musicon</h1>
+        <nav>
+          <ul class="navbar flex aic">
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" class="btn-black">Sing Up</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <!-- HERO -->
+    <article id="introduction">
+      <section class="container flex bg-grey" id="information"></section>
+    </article>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; Musicon 2023</p>
+    </footer>
+    <!-- EXTERNAL JAVASCRIPT -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

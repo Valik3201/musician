@@ -1,0 +1,266 @@
+/* Site Stylesheet
+  1. Global Styles
+  2. Typography Styles
+  3. Structure Styles
+  4. Module Styles
+  5. Component Styles
+  6. Page Styles
+---------------------------------------- */
+
+/* 1. Global Styles
+---------------------------------------- */
+
+:root {
+  /* COLORS */
+  --black: #000000;
+  --iced-lavender: #c2c8da;
+  --liberator-gold: #e6c744;
+  --orochimaru: #d9d9d9;
+  --stieglitz-silver: #8e8e8e;
+  --white: #ffffff;
+  --white-smoke: #f4f6f5;
+  --young-night: #242323;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--white);
+}
+
+ul {
+  list-style-type: none;
+}
+
+body,
+ul,
+div,
+h1,
+h2,
+h3,
+p,
+a {
+  padding: 0;
+  margin: 0;
+}
+
+/* 2. Typography Styles
+---------------------------------------- */
+
+.branding {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 84px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.1em;
+  width: 30%;
+  padding-bottom: 24px;
+}
+
+/* 3. Structure Styles
+---------------------------------------- */
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.flex {
+  display: flex;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.aic {
+  align-items: center;
+}
+
+/* 4. Module Styles
+---------------------------------------- */
+
+/* NAVBAR */
+
+.navbar {
+  text-transform: uppercase;
+  gap: 36px;
+}
+
+.navbar li a {
+  color: var(--stieglitz-silver);
+  letter-spacing: 0.22px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s ease-in;
+}
+
+.navbar li a:hover {
+  color: var(--young-night);
+}
+
+.navbar .btn-black {
+  color: var(--white);
+  font-weight: 400;
+  transition: background-color 0.25s ease-in;
+}
+
+.navbar .btn-black:hover {
+  color: var(--white);
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+}
+
+/* 5. Component Styles
+---------------------------------------- */
+
+li.current a {
+  color: var(--black);
+}
+
+.btn-black {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white-smoke);
+  background: var(--black);
+  border-radius: 10px;
+  padding: 10px 22px;
+  transition: background-color 0.25s ease-in;
+}
+
+.btn-black:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 6. Page Styles
+---------------------------------------- */
+
+.body {
+  max-width: 60%;
+  margin-bottom: 36px;
+}
+
+.hero {
+  flex-shrink: 1;
+  padding: 25px 50px 50px 100px;
+}
+
+.bg-grey {
+  max-width: 90%;
+  border-radius: 30px;
+  background: var(--white-smoke);
+}
+
+.img-hero {
+  flex-shrink: 1;
+  width: 450px;
+  margin-right: 85px;
+}
+
+.img-hero img {
+  display: block;
+}
+
+.highlight-white,
+.highlight-yellow {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+.highlight-white::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -25px;
+  transform: rotate(-2deg);
+  width: 190%;
+  height: 100%;
+  background-color: var(--white);
+  margin: 5px 0;
+  z-index: -1;
+}
+
+.highlight-yellow::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  transform: rotate(-2deg);
+  width: 135%;
+  height: 100%;
+  background-color: var(--liberator-gold);
+  margin: 5px 0;
+  z-index: -1;
+}
+
+.instrument {
+  width: 90%;
+  overflow: auto;
+}
+
+.image {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32%;
+  min-width: 100px;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+.details {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+  margin: -1% auto;
+  padding: 2%;
+}
+
+.name,
+.description,
+.price,
+del {
+  color: #000000;
+  text-align: left;
+}
+
+.description,
+.price {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.description {
+  height: 100%;
+  font-size: 13px;
+  overflow: auto;
+}
+
+.price {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sale {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fa4359;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+}
