@@ -13,6 +13,32 @@ Musicon is a polished web project featuring three seamlessly integrated pages: a
 - **Handlebars Templating:**
   The project leverages the power of Handlebars for client-side templating. Semantic templates have been created to showcase relevant information using JavaScript objects, arrays, and control flow. The built-in Handlebars iteration and control flow helpers enhance the dynamic display of content.
 
+## Usage of Handlebars Templating
+
+To dynamically render content using Handlebars, follow these steps in your JavaScript:
+
+```javascript
+// Get the Handlebars template element
+const templateElement = document.getElementById("templateHB");
+
+// Extract the template source from the element
+const templateSource = templateElement.innerHTML;
+
+// Compile the Handlebars template
+const template = Handlebars.compile(templateSource);
+
+// Define your data context (replace 'context' with your actual data)
+const context = {
+  // Your data properties here
+};
+
+// Generate the HTML with the compiled template and data
+const compiledHtml = template(context);
+
+// Insert the rendered HTML into the specified element in the DOM
+document.getElementById("information").innerHTML = compiledHtml;
+```
+
 ## Example Handlebars Template Usage
 
 ```html
