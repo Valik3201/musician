@@ -42,17 +42,30 @@
   <body>
     <!-- HEADER & NAVBAR -->
     <header>
-      <section class="container flex aic jcsb">
-        <h2 class="branding">Musicon</h2>
-        <nav>
-          <ul class="navbar flex aic">
-            <li class="current"><a href="index.html">Home</a></li>
+      <div class="container header-container">
+        <h1 class="branding">Musicon</h1>
+        <nav class="desktop-navbar">
+          <ul>
+            <li id="current"><a href="index.html">Home</a></li>
             <li><a href="store.html">Store</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="#" class="btn-black">Sing Up</a></li>
+            <li><a href="#" class="btn-black">Sign Up</a></li>
           </ul>
         </nav>
-      </section>
+        <div class="burger" onclick="toggleNavbar()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="mobile-navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li class="current"><a href="contact.html">Contact</a></li>
+            <li><a href="#" class="btn-black">Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- HERO -->
@@ -109,5 +122,6 @@
     </footer>
     <!-- EXTERNAL JAVASCRIPT -->
     <script src="js/script.js"></script>
+    <script src="js/mobileMenu.js"></script>
   </body>
 </html>

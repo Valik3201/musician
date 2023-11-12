@@ -44,6 +44,12 @@ a {
   margin: 0;
 }
 
+@media screen and (min-width: 320px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
 /* 2. Typography Styles
 ---------------------------------------- */
 
@@ -55,12 +61,18 @@ a {
 
 .title {
   text-transform: uppercase;
-  font-size: 84px;
+  font-size: 48px;
   font-style: normal;
   font-weight: 900;
   line-height: 1.1em;
   width: 30%;
   padding-bottom: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 84px;
+  }
 }
 
 /* 3. Structure Styles
@@ -92,33 +104,141 @@ a {
 /* 4. Module Styles
 ---------------------------------------- */
 
-/* NAVBAR */
+/* HEADER & NAVBAR */
 
-.navbar {
-  text-transform: uppercase;
-  gap: 36px;
+header {
+  color: var(--black);
+  padding: 10px 20px;
 }
 
-.navbar li a {
-  color: var(--stieglitz-silver);
-  letter-spacing: 0.22px;
-  text-decoration: none;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.branding {
+  margin: 0;
+}
+
+.desktop-navbar {
+  display: none;
+}
+
+.mobile-navbar {
+  display: flex;
+}
+
+.desktop-navbar ul,
+.mobile-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.desktop-navbar li,
+.mobile-navbar li {
+  margin: 0 15px;
+}
+
+.desktop-navbar a:not(.btn-black),
+.mobile-navbar a:not(.btn-black) {
   font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--stieglitz-silver);
   transition: color 0.25s ease-in;
 }
 
-.navbar li a:hover {
-  color: var(--young-night);
+.mobile-navbar a:not(.btn-black) {
+  color: var(--black);
 }
 
-.navbar .btn-black {
-  color: var(--white);
-  font-weight: 400;
-  transition: background-color 0.25s ease-in;
+.desktop-navbar a:not(.btn-black):hover {
+  color: var(--black);
 }
 
-.navbar .btn-black:hover {
-  color: var(--white);
+.burger {
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+}
+
+.mobile-navbar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background-color: var(--liberator-gold);
+  text-align: center;
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+.mobile-navbar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.mobile-navbar.active {
+  left: 0;
+  justify-content: center;
+}
+
+.burger.active {
+  position: fixed;
+  right: 49px;
+}
+
+.mobile-navbar.active ul {
+  display: flex;
+  gap: 30px;
+  font-size: 1.5em;
+}
+
+.burger {
+  display: block;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--black);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media only screen and (min-width: 769px) {
+  .burger {
+    display: none;
+  }
+
+  .mobile-navbar {
+    display: none;
+  }
+
+  .desktop-navbar {
+    display: flex;
+  }
 }
 
 /* FOOTER */
@@ -199,7 +319,7 @@ footer {
 /* 5. Component Styles
 ---------------------------------------- */
 
-li.current a {
+#current a {
   color: var(--black);
 }
 
@@ -229,30 +349,39 @@ li.current a {
 
 .hero {
   flex-shrink: 1;
-  padding: 25px 50px 50px 100px;
+  padding: 25px 25px 25px 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding: 25px 50px 50px 100px;
+  }
 }
 
 .bg-grey {
-  max-width: 90%;
+  width: clamp(320px, 90%, 100%);
   border-radius: 30px;
   background: var(--white-smoke);
 }
 
 .img-hero {
-  flex-shrink: 1;
-  width: 450px;
-  margin-right: 85px;
+  display: none;
 }
 
-.img-hero img {
-  display: block;
+@media only screen and (min-width: 1178px) {
+  .img-hero {
+    display: block;
+    flex-shrink: 1;
+    width: 450px;
+    margin-right: 85px;
+  }
 }
 
 .highlight-white,
 .highlight-yellow {
   position: relative;
   display: inline-block;
-  z-index: 2;
+  z-index: 0;
 }
 
 .highlight-white::before {
@@ -347,11 +476,20 @@ li.current a {
 
 #connection {
   margin: 50px auto;
-  max-width: 800px;
-  padding: 20px;
+  width: 90%;
   border-radius: 30px;
   background-color: var(--white-smoke);
   text-align: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  #connection {
+    width: 60%;
+  }
+}
+
+.contact-container {
+  padding: 20px;
 }
 
 #top {

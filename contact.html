@@ -25,47 +25,62 @@
 
   <body>
     <header>
-      <section class="container flex aic jcsb">
+      <div class="container header-container">
         <h1 class="branding">Musicon</h1>
-        <nav>
-          <ul class="navbar flex aic">
+        <nav class="desktop-navbar">
+          <ul>
+            <li id="current"><a href="index.html">Home</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" class="btn-black">Sign Up</a></li>
+          </ul>
+        </nav>
+        <div class="burger" onclick="toggleNavbar()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="mobile-navbar">
+          <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="store.html">Store</a></li>
             <li class="current"><a href="contact.html">Contact</a></li>
-            <li><a href="#" class="btn-black">Sing Up</a></li>
+            <li><a href="#" class="btn-black">Sign Up</a></li>
           </ul>
         </nav>
-      </section>
+      </div>
     </header>
 
     <article id="connection">
-      <section id="top">
-        <h2>Let's Get In Touch!</h2>
-        <p>
-          Ready to start purchasing your musical instruments on Musicon? That's
-          great! Give us a call or send us an email and we will get back to you
-          as soon as possible!
-        </p>
-      </section>
+      <div class="contact-container">
+        <section id="top">
+          <h2>Let's Get In Touch!</h2>
+          <p>
+            Ready to start purchasing your musical instruments on Musicon?
+            That's great! Give us a call or send us an email and we will get
+            back to you as soon as possible!
+          </p>
+        </section>
 
-      <section class="contact">
-        <p>Phone</p>
-        <p>+1 501 233 5036</p>
-      </section>
+        <section class="contact">
+          <p>Phone</p>
+          <p>+1 501 233 5036</p>
+        </section>
 
-      <section class="contact">
-        <p>E-mail</p>
-        <p>feedback@musicon.com</p>
-      </section>
+        <section class="contact">
+          <p>E-mail</p>
+          <p>feedback@musicon.com</p>
+        </section>
 
-      <section class="contact">
-        <p>Location</p>
-        <p>
-          Musicon <br />
-          111 Music Rd, Suite 33 <br />
-          New York, NY 11111
-        </p>
-      </section>
+        <section class="contact">
+          <p>Location</p>
+          <p>
+            Musicon <br />
+            111 Music Rd, Suite 33 <br />
+            New York, NY 11111
+          </p>
+        </section>
+      </div>
     </article>
 
     <footer>
@@ -99,9 +114,9 @@
 
         <div class="footer-section">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="store.html">Store</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </div>
 
@@ -114,5 +129,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/mobileMenu.js"></script>
   </body>
 </html>
