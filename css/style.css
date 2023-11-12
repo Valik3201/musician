@@ -123,7 +123,6 @@ a {
 
 /* FOOTER */
 
-/* Footer Styles */
 footer {
   grid-area: footer;
   background-color: var(--black);
@@ -134,7 +133,7 @@ footer {
 
 .footer-container {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr; /* Изменили ширину первой колонки */
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 20px;
 }
 
@@ -345,3 +344,47 @@ li.current a {
 }
 
 /* CONTACT */
+
+#connection {
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: var(--white-smoke);
+  text-align: center;
+}
+
+#top {
+  margin-bottom: 30px;
+}
+
+#top h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#top p {
+  width: 85%;
+  margin: 0 auto;
+  color: var(--young-night);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact p:first-child {
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: var(--stieglitz-silver);
+}
+
+.contact p:last-child {
+  font-size: 1.4em;
+  margin: 0;
+}
