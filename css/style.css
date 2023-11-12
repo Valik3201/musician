@@ -108,7 +108,7 @@ a {
 
 header {
   color: var(--black);
-  padding: 10px 20px;
+  padding: 0 20px;
 }
 
 .header-container {
@@ -174,8 +174,9 @@ header {
   width: 100%;
   background-color: var(--liberator-gold);
   text-align: center;
-  transition: left 0.3s ease;
+  transition: left 0.3s ease-in;
   z-index: 1;
+  justify-content: center;
 }
 
 .mobile-navbar ul {
@@ -184,22 +185,12 @@ header {
   align-items: center;
   justify-content: center;
   height: 100%;
+  gap: 30px;
+  font-size: 1.5em;
 }
 
 .mobile-navbar.active {
   left: 0;
-  justify-content: center;
-}
-
-.burger.active {
-  position: fixed;
-  right: 49px;
-}
-
-.mobile-navbar.active ul {
-  display: flex;
-  gap: 30px;
-  font-size: 1.5em;
 }
 
 .burger {
