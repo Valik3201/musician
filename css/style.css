@@ -47,6 +47,7 @@ a {
 ---------------------------------------- */
 
 .branding {
+  font-size: 30px;
   text-transform: uppercase;
   font-weight: 900;
 }
@@ -121,8 +122,78 @@ a {
 
 /* FOOTER */
 
+/* Footer Styles */
 footer {
-  text-align: center;
+  grid-area: footer;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 50px 0;
+  margin-top: 24px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* Изменили ширину первой колонки */
+  gap: 20px;
+}
+
+.footer-section {
+  text-align: left;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: var(--stieglitz-silver);
+  text-decoration: none;
+  transition: color 0.25s ease-in;
+}
+
+.footer-section a:hover {
+  color: var(--white-smoke);
+}
+
+.footer-branding {
+  font-size: 30px;
+}
+
+.footer-slogan {
+  color: var(--stieglitz-silver);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.footer-social a {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  background-color: var(--liberator-gold);
+  border-radius: 10px;
+  transition: background-color 0.25s ease-in;
+}
+
+.footer-social a:hover {
+  background-color: #ead55f;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* 5. Component Styles
