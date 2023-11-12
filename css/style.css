@@ -517,3 +517,13 @@ footer {
   font-size: 1.4em;
   margin: 0;
 }
+
+.contact a {
+  color: var(--black);
+  text-decoration: none;
+  transition: color 0.25s ease-in;
+}
+
+.contact a:hover {
+  color: var(--stieglitz-silver);
+}
