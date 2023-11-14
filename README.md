@@ -1,6 +1,6 @@
 # Musicon 
 
-Musicon is a polished web project featuring three seamlessly integrated pages: a captivating home page, a sophisticated store page, and a user-friendly contacts page. This project was created with the primary goal of studying and implementing [Handlebars](https://github.com/handlebars-lang/handlebars.js), a powerful client-side templating engine. It serves as a practical example of how Handlebars can be integrated into a web project for dynamic content rendering.
+Musicon is a polished web project featuring three seamlessly integrated pages: a captivating home page, a sophisticated store page, and a user-friendly contacts page. This project was created with the primary goal of studying and implementing [Handlebars.js](https://github.com/handlebars-lang/handlebars.js), a powerful client-side templating engine. It serves as a practical example of how Handlebars can be integrated into a web project for dynamic content rendering.
 
 ## Features
 
